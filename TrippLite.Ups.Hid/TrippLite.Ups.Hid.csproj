@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net481;net9.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>TrippLite.Ups.Hid</RootNamespace>
+    <AssemblyName>TrippLite.Ups.Hid</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HidSharp" Version="2.1.0" />
+  </ItemGroup>
+
+</Project>
