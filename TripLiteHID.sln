@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36401.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrippLite.Ups.Hid", "TrippLite.Ups.Hid\TrippLite.Ups.Hid.csproj", "{9CE98F98-AAE9-4C1B-A8FE-843FCE2420ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrippLite.Ups.Hid.Tests", "TrippLite.Ups.Hid.Tests\TrippLite.Ups.Hid.Tests.csproj", "{8759BCCC-2FF5-4336-A765-1D22EE45A37A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,18 @@ Global
 		{9CE98F98-AAE9-4C1B-A8FE-843FCE2420ED}.Release|x64.Build.0 = Release|Any CPU
 		{9CE98F98-AAE9-4C1B-A8FE-843FCE2420ED}.Release|x86.ActiveCfg = Release|Any CPU
 		{9CE98F98-AAE9-4C1B-A8FE-843FCE2420ED}.Release|x86.Build.0 = Release|Any CPU
+		{8759BCCC-2FF5-4336-A765-1D22EE45A37A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8759BCCC-2FF5-4336-A765-1D22EE45A37A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8759BCCC-2FF5-4336-A765-1D22EE45A37A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8759BCCC-2FF5-4336-A765-1D22EE45A37A}.Debug|x64.Build.0 = Debug|Any CPU
+		{8759BCCC-2FF5-4336-A765-1D22EE45A37A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8759BCCC-2FF5-4336-A765-1D22EE45A37A}.Debug|x86.Build.0 = Debug|Any CPU
+		{8759BCCC-2FF5-4336-A765-1D22EE45A37A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8759BCCC-2FF5-4336-A765-1D22EE45A37A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8759BCCC-2FF5-4336-A765-1D22EE45A37A}.Release|x64.ActiveCfg = Release|Any CPU
+		{8759BCCC-2FF5-4336-A765-1D22EE45A37A}.Release|x64.Build.0 = Release|Any CPU
+		{8759BCCC-2FF5-4336-A765-1D22EE45A37A}.Release|x86.ActiveCfg = Release|Any CPU
+		{8759BCCC-2FF5-4336-A765-1D22EE45A37A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
