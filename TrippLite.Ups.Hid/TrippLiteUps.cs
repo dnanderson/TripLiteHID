@@ -12,8 +12,8 @@ namespace TrippLite.Ups.Hid
     /// </summary>
     public class TrippLiteUps : IDisposable
     {
-        private readonly HidDevice _device;
-        private HidStream _stream;
+        private readonly IHidDevice _device;
+        private IHidStream _stream;
 
         /// <summary>
         /// The default TrippLite Vendor ID.
@@ -36,13 +36,8 @@ namespace TrippLite.Ups.Hid
         /// </summary>
         /// <exception cref="InvalidOperationException">Thrown if no compatible TrippLite device can be found.</exception>
         public TrippLiteUps()
+            : this(FindDevices(DefaultVendorId).FirstOrDefault() ?? throw new InvalidOperationException("Could not find any connected TrippLite devices. Please specify VID/PID if they differ from the default."))
         {
-            _device = FindDevices(DefaultVendorId).FirstOrDefault();
-            if (_device == null)
-            {
-                throw new InvalidOperationException("Could not find any connected TrippLite devices. Please specify VID/PID if they differ from the default.");
-            }
-            Open();
         }
 
         /// <summary>
@@ -51,6 +46,17 @@ namespace TrippLite.Ups.Hid
         /// <param name="device">The HID device to connect to.</param>
         /// <exception cref="ArgumentNullException">Thrown if the device is null.</exception>
         public TrippLiteUps(HidDevice device)
+            : this(new HidDeviceWrapper(device))
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TrippLiteUps"/> class using the specified HID device interface.
+        /// This constructor is ideal for dependency injection and testing.
+        /// </summary>
+        /// <param name="device">The HID device interface to connect to.</param>
+        /// <exception cref="ArgumentNullException">Thrown if the device is null.</exception>
+        public TrippLiteUps(IHidDevice device)
         {
             _device = device ?? throw new ArgumentNullException(nameof(device));
             Open();
